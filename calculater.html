@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+</head>
+<style>
+    .calc-box {
+        box-shadow: 0 0 5px #000;
+        border-radius: 10px;
+        padding: 20px;
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .sub-box {
+        display: flex;
+        justify-content: space-betweens;
+        align-items: center;
+        flex-direction: row;
+        margin: 10px;
+        border-bottom: 2px solid rgb(72, 69, 69);
+    }
+
+    .sub-box .btn {
+        background-color: #940000;
+        color: aliceblue;
+        border-radius: 8px;
+        width: 3rem;
+    }
+
+    .sub-box input {
+        border: none;
+        outline: none;
+        padding: 10px;
+        box-shadow: 0 0 5px black;
+        border-radius: 10px;
+
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+
+    .ms-0 {
+        margin-left: 10px;
+    }
+
+    .btn {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+        width: 3rem;
+        cursor: pointer;
+    }
+
+    .number-Arith {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .operators {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .operators .btn {
+        background-color: rgb(40, 38, 33);
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <form name="form1">
+        <div class="calc-box">
+            <div class="sub-box">
+                <input type="text" name="answer" placeholder="0 0" class="w-100" id="result">
+                <input type="button" value="AC" class="ms-0 btn" onclick="form1.answer.value =' '"><br>
+            </div>
+            <div class="number-Arith">
+                <div class="Number">
+                    <input type="button" value="9" onclick="addToInput('9')" class="btn">
+                    <input type="button" value="8" onclick="addToInput('8')" class="btn">
+                    <input type="button" value="7" onclick="addToInput('7')" class="btn"><br>
+                    <input type="button" value="6" onclick="addToInput('6')" class="btn">
+                    <input type="button" value="5" onclick="addToInput('5')" class="btn">
+                    <input type="button" value="4" onclick="addToInput('4')" class="btn"><br>
+                    <input type="button" value="3" onclick="addToInput('3')" class="btn">
+                    <input type="button" value="2" onclick="addToInput('2')" class="btn">
+                    <input type="button" value="1" onclick="addToInput('1')" class="btn"><br>
+                    <input type="button" value="0" onclick="addToInput('0')" class="btn">
+                    <input type="button" value="." onclick="addToInput('.')" class="btn">
+                    <input type="button" value="=" onclick="calculateResult()" class="btn">
+                </div>
+                <div class="operators">
+                    <input type="button" value="%" onclick="addToInput('%')" class="btn">
+                    <input type="button" value="*" onclick="addToInput('*')" class="btn">
+                    <input type="button" value="-" onclick="addToInput('-')" class="btn">
+                    <input type="button" value="+" onclick="addToInput('+')" class="btn">
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+<script>
+     function addToInput(value) {
+      document.form1.answer.value += value;
+    }
+
+    function calculateResult() {
+      try {
+        document.form1.answer.value = eval(document.form1.answer.value);
+      } catch (error) {
+        document.form1.answer.value = 'Error';
+      }
+    }
+</script>
+
+</html>
