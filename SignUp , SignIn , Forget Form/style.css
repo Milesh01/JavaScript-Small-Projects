@@ -1,0 +1,118 @@
+body{
+    background-color: aquamarine;
+    font-size: larger;
+}
+.form{
+    width: 250px;
+    /* height: 200px; */
+    background-color: rgb(16, 108, 189);
+    padding: 10px;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+}
+.form .form-header{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* justify-content: space-around; */
+}
+.form .form-header > div{
+    width: calc(100% / 3 );
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.form.signup{
+    background-color: rgb(14, 107, 194);
+}
+.form.signin{
+    background-color: yellow;
+}
+.form.reset{
+    background-color: green;
+}
+.form.signup .form-header div.show-signup{
+    color: red;
+}
+.form.signin .form-header div.show-signin{
+    color: red;
+}
+.form.reset .form-header div.show-reset{
+    color: red;
+}
+.form .form-elements {
+    margin-top: 13px;
+}        
+.form .form-elements .form-element{
+    height: 50px;
+    opacity: 1;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+.form .form-elements .form-element input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    /* border: 1px solid #222; */
+    border-radius: 5px;
+    outline: none;
+    margin: 2px 0;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 1px rgba(209, 213, 219,1);
+}
+.form .form-element button{
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 195, 81);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 1px rgb(0, 0, 0);
+}
+.form .arrow{
+    position: absolute;
+    top: 45px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(211, 211, 211);
+}
+/* .form.signup .arrow{
+    left: calc(calc(100% / 3) / 2);
+}
+.form.signin .arrow{
+    left: calc(calc(100% / 3) + calc(calc(100% / 3)) / 2.2);
+}
+.form.reset .arrow{
+    left: calc(calc(calc(100% / 3) * 2 + calc(calc(100% / 3)) / 2.2));
+} */
+.form.signup .arrow{
+    left: 15%
+}
+.form.signin .arrow{
+    left: 45%
+}
+.form.reset .arrow{
+    left: 77%
+}
+.form.signin .form-elements > div:nth-child(3){
+    height: 0;
+    opacity: 0;
+}
+.form.reset .form-elements > div:nth-child(2),
+.form.reset .form-elements > div:nth-child(3){
+    height: 0;
+    opacity: 0;
+}
