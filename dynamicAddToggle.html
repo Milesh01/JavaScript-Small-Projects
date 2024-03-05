@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+        button{
+            background-color: antiquewhite;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Create menu button
+  const menuButton = document.createElement("button");
+  menuButton.textContent = "Toggle Menu";
+  document.body.appendChild(menuButton);
+
+  // Create menu
+  const menu = document.createElement("ul");
+  menu.id = "menu";
+  menu.className = "hidden";
+  document.body.appendChild(menu);
+
+  // Add menu items
+  const menuItems = ["Menu Item 1", "Menu Item 2", "Menu Item 3"];
+  menuItems.forEach(item => {
+    const menuItem = document.createElement("li");
+    menuItem.textContent = item;
+    menu.appendChild(menuItem);
+  });
+
+  // Toggle menu on button click
+  menuButton.addEventListener("click", function() {
+    menu.classList.toggle("hidden");
+  });
+});
+
+</script>
+</html>
