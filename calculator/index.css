@@ -1,0 +1,191 @@
+/* This is an example CSS file, feel free to remove/edit it anytime */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2accfd;
+  text-align: center;
+}
+
+#calculator {
+  position: relative;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+}
+input[type="text"] {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box;
+  /* border: 2px solid #8c8b8b; */
+  border: none;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+}
+button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+button.operator {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+button.equals {
+  background-color: #ff0000;
+  color: #fff;
+}
+.btn{
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+}
+.btn:hover{
+  background-color: #b0b2b3;
+}
+.txt-color{
+    color: blue;
+}
+.op{
+    font-family: bolder;
+    color: red;
+    font-size: 15px;
+}
+#previous-operation{
+    text-align: left;
+    transition: all .3s ease-in-out;
+    color: #ccc;
+    margin: 0 0 0 30px;
+    position: absolute;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+transition: 0.4s;
+border-radius: 34px;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 0px;
+top: 1px;
+bottom: 2px;
+/* background-color: rgb(0, 0, 0); */
+background-image: url("assets/icons/dark-mode-icon.svg");
+background-size: contain;
+transition: 0.4s;
+border-radius: 50%;
+}
+input:checked +.slider:before{
+background-image: url("assets/icons/light-mode-icon.svg");
+background-color: #ffffff;
+background-position: center;
+background-size: contain;
+
+}
+input:checked + .slider {
+  background-image: url("assets/icons/dark-mode-icon.svg");
+  background-size: contain;
+  /* background-color: red; */
+  filter: invert(100%);
+}
+
+input:checked + .slider:before {
+transform: translateX(21px);
+}
+.switch {
+position: absolute;
+display: inline-block;
+width: 40px;
+height: 20px;
+z-index: 2;
+right: 5px;
+}
+
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.night-mode{
+transition: all .5s ease-in-out;
+}
+.night-mode .btn{
+background-color: #292626;
+border: 1px solid #8c8b8b;
+box-shadow: 0 1px 3px rgba(57, 53, 53, 0.12), 0 1px 2px rgbrgba(39, 38, 38, 0.24);
+color: #fff;
+}
+.night-mode button.equals {
+  background-color: #a00404;
+  color: #fff;
+}
+.night-mode .op{
+color: red;
+}
+.night-mode .txt-color{
+color: blue;
+}
+.night-mode #calculator , .night-mode input{
+background-color: #292626;
+color: white;
+}
+.night-mode input{
+  border: 1px solid #9e9b9b;
+}
+.night-mode span.svgBtn img{
+  filter: invert(100%);
+}
+.night-mode .TodoBox input ,.night-mode .TodoBox button{
+background-color: black;
+color: white;
+}
+.night-mode .box h1 {
+color: black;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer a {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer span {
+  font-size: 14px;
+}
+span.svgBtn img{
+  width: 17px;
+}
